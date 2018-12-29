@@ -21,12 +21,12 @@ calc_returns <- function(prices, sig=1) {
 #################################################
 
 # Stock symbol to test versus a default for comparison
-symbol <- "GLD"
+symbol <- "AAPL"
 versus <- "SPY"
 
-period <- "12 months"
+period <- "2 years"
 strategy <- "BBands"
-lowerBound <- -0.8  # Oversold trigger.
+lowerBound <- 0  # Oversold trigger.
 upperBound <- 1.2  # Overbought trigger.
 
 # Get data for each symbol
@@ -75,4 +75,5 @@ print(paste(versus, ":", last(vers_eq)))
 
 title=paste("Performance",symbol,strategy)
 print(plot(all_equity, main=title, legend.loc = "topleft", legend.names = legend))
+
 
